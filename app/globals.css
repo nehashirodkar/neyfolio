@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050810;   /* deep space navy — almost black */
+  --foreground: #e6e9f0;
+  --accent: #22d3ee;       /* cyan-400 */
+  --accent-2: #a78bfa;     /* violet-400 */
+  --accent-glow: rgba(34, 211, 238, 0.4);
+}
+
+/* Background colour goes on <html>, NOT <body>, so the fixed canvas
+   (z-index -10) is visible against html's paint. */
+html {
+  background: var(--background);
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+/* Anchor offsets so navbar (h-14 = 56px sticky) doesn't cover section headers */
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+body {
+  background: transparent;
+  color: var(--foreground);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Playful handwriting font for the "Welcome to Neyfolio" tag */
+.font-cursive {
+  font-family: var(--font-caveat), "Comic Sans MS", cursive;
+}
+
+/* Orbital rotation animations */
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes orbit-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+.animate-orbit {
+  animation: orbit 60s linear infinite;
+}
+.animate-orbit-reverse {
+  animation: orbit-reverse 60s linear infinite;
+}
+.group:hover .animate-orbit,
+.group:hover .animate-orbit-reverse {
+  animation-play-state: paused;
+}
+
+/* Pulsing avatar halo */
+@keyframes core-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%      { opacity: 0.7; transform: scale(1.06); }
+}
+.animate-core-pulse {
+  animation: core-pulse 4s ease-in-out infinite;
+}
+
+/* Pure vertical bobble — NO rotation. Use on character avatars. */
+@keyframes av-bobble {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-5px); }
+}
+.av-bobble {
+  animation: av-bobble 3.5s ease-in-out infinite;
+}
+
+/* Gentle wobble for hobby cards — small rotation back and forth. */
+@keyframes hobby-wobble {
+  0%, 100% { transform: rotate(-2deg); }
+  50%      { transform: rotate(2deg); }
+}
+.hobby-wobble {
+  animation: hobby-wobble 4s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+/* Pause wobble on hover so the card straightens for reading */
+.hobby-wobble:hover {
+  animation-play-state: paused;
+  transform: rotate(0deg) scale(1.03);
+  transition: transform 0.3s ease-out;
+}
+
+/* Typewriter blinking cursor */
+@keyframes cursor-blink {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.animate-cursor {
+  animation: cursor-blink 0.8s steps(1) infinite;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "index": "tsx --env-file=.env.local scripts/index-content.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "latest",
+    "@supabase/supabase-js": "latest",
+    "ai": "latest",
+    "lucide-react": "^1.16.0",
+    "next": "latest",
+    "openai": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "tsx": "^4.22.3",
+    "typescript": "latest"
+  }
+}
