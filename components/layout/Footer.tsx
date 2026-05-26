@@ -21,7 +21,7 @@ const QUICK_LINKS = [
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 mt-20 relative z-10 bg-slate-950/30 backdrop-blur-md">
-      <div className="max-w-6xl mx-auto px-6 sm:px-10 py-12 flex flex-col sm:flex-row sm:flex-wrap sm:justify-between gap-10">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-start">
         {/* Brand + tagline — clicking the logo/name returns to the top */}
         <div className="space-y-3 max-w-[260px]">
           <Link
