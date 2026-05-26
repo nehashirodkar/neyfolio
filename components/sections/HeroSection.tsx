@@ -19,7 +19,7 @@ export default function HeroSection() {
 
           {/* Playful cursive tag — appears once the typewriter is mostly done */}
           <FadeUp immediate delay={1200}>
-            <p className="font-cursive text-3xl sm:text-4xl text-cyan-300 -rotate-2 inline-block origin-left">
+            <p className="font-cursive text-3xl sm:text-4xl text-cyan-300">
               Welcome to Neyfolio
             </p>
           </FadeUp>
