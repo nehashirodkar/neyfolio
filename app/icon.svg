@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="ns-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="50%" stop-color="#c4b5fd"/>
+      <stop offset="100%" stop-color="#f0abfc"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="16" fill="#050810"/>
+  <circle cx="16" cy="16" r="14" fill="none" stroke="url(#ns-grad)" stroke-width="1.5" opacity="0.5"/>
+  <text x="16" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" text-anchor="middle" fill="url(#ns-grad)" letter-spacing="-0.5">NS</text>
+</svg>

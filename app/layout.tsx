@@ -14,7 +14,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Neha Shirodkar — AI Software Engineer",
+  title: "Neha Shirodkar | AI Software Engineer",
   description:
     "Personal portfolio with an AI assistant grounded in my projects, case studies, and experience.",
 };
