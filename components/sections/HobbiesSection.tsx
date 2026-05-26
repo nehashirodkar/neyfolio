@@ -56,6 +56,9 @@ export default function HobbiesSection() {
         <p className="text-base italic text-cyan-300/80">
           evidence I leave my desk occasionally
         </p>
+        <p className="text-sm text-slate-500 pt-1">
+          richer content — photos, audio, the actual things I&apos;ve made — coming soon
+        </p>
       </header>
 
       {/* DESKTOP — 7 planets in a horizontal zigzag, no connecting line */}
