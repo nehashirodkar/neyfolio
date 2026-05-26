@@ -35,7 +35,8 @@ function HobbyPlanet({ h, delay }: { h: (typeof HOBBIES)[number]; delay: number 
       </div>
       {/* Name + blurb below the planet */}
       <h3 className="mt-4 font-semibold text-lg text-slate-100">{h.name}</h3>
-      <p className="mt-1.5 text-sm text-slate-300 leading-relaxed max-w-[210px] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+      {/* Always visible on mobile/tablet (no hover state); hover-reveal on lg+ */}
+      <p className="mt-1.5 text-sm text-slate-300 leading-relaxed max-w-[210px] opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-200">
         {h.blurb}
       </p>
     </div>
